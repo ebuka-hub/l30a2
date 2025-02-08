@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <p>Enter a number and click ok:</p>
+    <input id="id1" type="number" min="100" max="300" required>
+    <button onclick="mufunction()">ok</button>
+    <P>If the number is les than 100 or greater than 300, an error messeage will be displayed</P>
+    <script>
+        function myfunction() {
+            var inpobj = document.getElementById("id1");
+            if (! inpobj.checkValidity()) {
+                document.getElementById("result").innerHTML = inpobj.validationMesseage;
+            } else {
+                document.getElementById("result").innerHTML = "Input ok";
+            }
+        }
+    </script>
+</body>
+</html>
